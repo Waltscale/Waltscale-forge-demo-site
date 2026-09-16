@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SwiftRoof UK | Trusted Roofing Contractors</title>
+  <meta name="description" content="Professional roofing services across the UK. Repairs, replacements, flat roofs and emergency call-outs. Get a free quote today.">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="#" class="logo" aria-label="SwiftRoof UK home">SwiftRoof</a>
+      <nav class="nav" id="nav" aria-label="Main navigation">
+        <ul class="nav-list">
+          <li><a href="#services">Services</a></li>
+          <li><a href="#why-us">Why Us</a></li>
+          <li><a href="#quote" class="btn btn-small">Get a Quote</a></li>
+        </ul>
+      </nav>
+      <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="nav" aria-label="Toggle menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container">
+        <div class="hero-content">
+          <h1>Roofing done right, from slate to flat felt.</h1>
+          <p class="hero-subtitle">Reliable repairs, replacements and emergency roofing across the UK. Fully insured, local roofers you can trust.</p>
+          <div class="hero-actions">
+            <a href="#quote" class="btn btn-primary">Free Quote</a>
+            <a href="tel:+441234567890" class="btn btn-secondary">Call 01234 567 890</a>
+          </div>
+          <ul class="hero-badges">
+            <li>Free estimates</li>
+            <li>Insurance work</li>
+            <li>20+ years experience</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="services" id="services">
+      <div class="container">
+        <h2 class="section-title">Our roofing services</h2>
+        <div class="services-grid">
+          <article class="service-card">
+            <div class="service-icon" aria-hidden="true">🏠</div>
+            <h3>Roof Repairs</h3>
+            <p>Leaks, slipped slates, broken tiles and storm damage fixed quickly and properly.</p>
+          </article>
+          <article class="service-card">
+            <div class="service-icon" aria-hidden="true">🔨</div>
+            <h3>Re-roofing</h3>
+            <p>Full and partial roof replacements using quality materials built to last.</p>
+          </article>
+          <article class="service-card">
+            <div class="service-icon" aria-hidden="true">🏢</div>
+            <h3>Flat Roofing</h3>
+            <p>EPDM rubber, GRP fibreglass and felt flat roofs for homes and businesses.</p>
+          </article>
+          <article class="service-card">
+            <div class="service-icon" aria-hidden="true">🌧️</div>
+            <h3>Emergency Call-outs</h3>
+            <p>Rapid response to storm damage and urgent leaks, 24 hours a day.</p>
+          </article>
+          <article class="service-card">
+            <div class="service-icon" aria-hidden="true">🪟</div>
+            <h3>Guttering & Leadwork</h3>
+            <p>New gutters, fascias, soffits and lead flashing installed and repaired.</p>
+          </article>
+          <article class="service-card">
+            <div class="service-icon" aria-hidden="true">✅</div>
+            <h3>Roof Surveys</h3>
+            <p>Detailed inspections and reports for homebuyers, insurance and maintenance.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="trust" id="why-us">
+      <div class="container">
+        <h2 class="section-title">Why homeowners trust us</h2>
+        <div class="trust-grid">
+          <div class="trust-item">
+            <span class="trust-number">20+</span>
+            <span class="trust-label">Years in roofing</span>
+          </div>
+          <div class="trust-item">
+            <span class="trust-number">5★</span>
+            <span class="trust-label">Rated on Google</span>
+          </div>
+          <div class="trust-item">
+            <span class="trust-number">£5M</span>
+            <span class="trust-label">Public liability cover</span>
+          </div>
+          <div class="trust-item">
+            <span class="trust-number">0%</span>
+            <span class="trust-label">Deposit required</span>
+          </div>
+        </div>
+        <blockquote class="testimonial">
+          <p>"SwiftRoof replaced our entire roof in four days. Clean, polite and the finish is excellent. Highly recommended."</p>
+          <footer>— Sarah M., Birmingham</footer>
+        </blockquote>
+      </div>
+    </section>
+
+    <section class="quote" id="quote">
+      <div class="container">
+        <div class="quote-box">
+          <h2>Get your free roofing quote</h2>
+          <p>Tell us what you need and we'll call you back within 24 hours.</p>
+          <form class="quote-form" id="quoteForm" novalidate>
+            <div class="form-row">
+              <label for="name">Name</label>
+              <input type="text" id="name" name="name" required placeholder="John Smith">
+            </div>
+            <div class="form-row">
+              <label for="phone">Phone</label>
+              <input type="tel" id="phone" name="phone" required placeholder="01234 567 890">
+            </div>
+            <div class="form-row">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" placeholder="john@example.com">
+            </div>
+            <div class="form-row">
+              <label for="postcode">Postcode</label>
+              <input type="text" id="postcode" name="postcode" required placeholder="B1 1AA">
+            </div>
+            <div class="form-row form-row-full">
+              <label for="message">Tell us about the job</label>
+              <textarea id="message" name="message" rows="4" placeholder="e.g. Leak in bedroom ceiling after storm"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary btn-full">Request my quote</button>
+          </form>
+          <p class="form-note" id="formNote" role="status" aria-live="polite"></p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; <span id="year"></span> SwiftRoof UK Ltd. Registered in England &amp; Wales.</p>
+      <p><a href="tel:+441234567890">01234 567 890</a> &middot; <a href="mailto:hello@swiftroof.example">hello@swiftroof.example</a></p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
