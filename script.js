@@ -11,6 +11,13 @@
   var menuToggle = document.getElementById('menuToggle');
   var nav = document.getElementById('nav');
 
+  function closeMenu(restoreFocus) {
+    if (!menuToggle || !nav) return;
+    nav.classList.remove('open');
+    menuToggle.setAttribute('aria-expanded', 'false');
+    if (restoreFocus) menuToggle.focus();
+  }
+
   if (menuToggle && nav) {
     menuToggle.addEventListener('click', function () {
       var isOpen = nav.classList.toggle('open');
@@ -20,9 +27,14 @@
     // Close menu when a link is clicked
     nav.querySelectorAll('a').forEach(function (link) {
       link.addEventListener('click', function () {
-        nav.classList.remove('open');
-        menuToggle.setAttribute('aria-expanded', 'false');
+        closeMenu(false);
       });
+    });
+
+    document.addEventListener('keydown', function (event) {
+      if (event.key === 'Escape' && nav.classList.contains('open')) {
+        closeMenu(true);
+      }
     });
   }
 
@@ -39,14 +51,13 @@
       var postcode = form.postcode.value.trim();
 
       if (!name || !phone || !postcode) {
+        formNote.className = 'form-note is-error';
         formNote.textContent = 'Please fill in your name, phone and postcode.';
-        formNote.style.color = '#ffb3b3';
         return;
       }
 
-      // Demo only: no backend is wired up
-      formNote.textContent = 'Thanks ' + name + '. We\'ll call you within 24 hours.';
-      formNote.style.color = '#b8e6c1';
+      formNote.className = 'form-note is-success';
+      formNote.textContent = 'Thanks ' + name + '. Your details were shown in this demo; no enquiry has been sent.';
       form.reset();
     });
   }
