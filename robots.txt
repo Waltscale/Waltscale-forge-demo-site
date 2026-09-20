@@ -1,0 +1,4 @@
+# Replace the relative sitemap location with the deployed absolute URL before launch.
+User-agent: *
+Disallow:
+Sitemap: ./sitemap.xml

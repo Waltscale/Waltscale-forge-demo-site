@@ -3,6 +3,7 @@
   --color-blue: #1e3a63;
   --color-sky: #4a90d9;
   --color-orange: #e76f22;
+  --color-orange-accessible: #a94400;
   --color-orange-dark: #c85a18;
   --color-white: #ffffff;
   --color-cream: #f7f7f5;
@@ -194,7 +195,7 @@ a {
 
 .hero-eyebrow,
 .section-kicker {
-  color: var(--color-orange);
+  color: var(--color-orange-accessible);
   font-size: 0.78rem;
   font-weight: 800;
   letter-spacing: 0.12em;
@@ -202,7 +203,7 @@ a {
 }
 
 .hero-eyebrow {
-  color: #f8b185;
+  color: #ffd2b8;
   margin-bottom: 1rem;
 }
 
@@ -445,6 +446,10 @@ section {
 
 .form-note.is-success {
   color: #b8e6c1;
+}
+
+.form-note.is-demo {
+  color: #d9e8ff;
 }
 
 /* Footer */

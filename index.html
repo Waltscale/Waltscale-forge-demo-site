@@ -3,8 +3,22 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SwiftRoof UK | Trusted Roofing Contractors</title>
-  <meta name="description" content="Professional roofing services across the UK. Repairs, replacements, flat roofs and emergency call-outs. Get a free quote today.">
+  <title>SwiftRoof UK | Roofing support and services</title>
+  <meta name="description" content="A demo homepage explaining roofing repairs, replacements, flat roofs and inspection enquiries.">
+  <link rel="canonical" href="./">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="SwiftRoof UK | Roofing support and services">
+  <meta property="og:description" content="A demo homepage explaining roofing repairs, replacements, flat roofs and inspection enquiries.">
+  <meta property="og:url" content="./">
+  <meta property="og:site_name" content="SwiftRoof UK">
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "SwiftRoof UK",
+      "url": "./"
+    }
+  </script>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -60,7 +74,7 @@
           <article class="service-card">
             <div class="service-icon" aria-hidden="true">🔨</div>
             <h3>Re-roofing</h3>
-            <p>Full and partial roof replacements using quality materials built to last.</p>
+            <p>Full and partial roof replacements, with options explained for the building and situation.</p>
           </article>
           <article class="service-card">
             <div class="service-icon" aria-hidden="true">🏢</div>
@@ -70,7 +84,7 @@
           <article class="service-card">
             <div class="service-icon" aria-hidden="true">🌧️</div>
             <h3>Emergency Call-outs</h3>
-            <p>Rapid response to storm damage and urgent leaks, 24 hours a day.</p>
+            <p>Information and next-step guidance for storm damage and urgent leaks.</p>
           </article>
           <article class="service-card">
             <div class="service-icon" aria-hidden="true">🪟</div>
@@ -116,27 +130,27 @@
       <div class="container">
         <div class="quote-box">
           <h2>Get your free roofing quote</h2>
-          <p>Tell us what you need so the right follow-up can be planned. This demo form does not send an enquiry yet.</p>
-          <form class="quote-form" id="quoteForm" novalidate>
+          <p id="formIntro">This is a non-submitting demo form. It does not send enquiries or store your details.</p>
+          <form class="quote-form" id="quoteForm" novalidate aria-describedby="formIntro formNote">
             <div class="form-row">
               <label for="name">Name</label>
-              <input type="text" id="name" name="name" required placeholder="John Smith">
+              <input type="text" id="name" name="name" required minlength="2" maxlength="80" autocomplete="name" placeholder="John Smith">
             </div>
             <div class="form-row">
               <label for="phone">Phone</label>
-              <input type="tel" id="phone" name="phone" required placeholder="01234 567 890">
+              <input type="tel" id="phone" name="phone" required minlength="7" maxlength="25" autocomplete="tel" placeholder="01234 567 890">
             </div>
             <div class="form-row">
               <label for="email">Email</label>
-              <input type="email" id="email" name="email" placeholder="john@example.com">
+              <input type="email" id="email" name="email" maxlength="254" autocomplete="email" placeholder="john@example.com">
             </div>
             <div class="form-row">
               <label for="postcode">Postcode</label>
-              <input type="text" id="postcode" name="postcode" required placeholder="B1 1AA">
+              <input type="text" id="postcode" name="postcode" required minlength="5" maxlength="8" autocomplete="postal-code" placeholder="B1 1AA">
             </div>
             <div class="form-row form-row-full">
               <label for="message">Tell us about the job</label>
-              <textarea id="message" name="message" rows="4" placeholder="e.g. Leak in bedroom ceiling after storm"></textarea>
+              <textarea id="message" name="message" required minlength="10" maxlength="1000" rows="4" placeholder="e.g. Leak in bedroom ceiling after storm"></textarea>
             </div>
             <button type="submit" class="btn btn-primary btn-full">Request my quote</button>
           </form>
