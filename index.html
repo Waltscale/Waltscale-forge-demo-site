@@ -23,9 +23,10 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body id="top">
+  <a class="skip-link" href="#main-content">Skip to main content</a>
   <header class="site-header">
     <div class="container header-inner">
-      <a href="#top" class="logo" aria-label="SwiftRoof UK home">SwiftRoof</a>
+      <a href="#top" class="logo">SwiftRoof<span>.UK</span></a>
       <nav class="nav" id="nav" aria-label="Main navigation">
         <ul class="nav-list">
           <li><a href="#services">Services</a></li>
@@ -33,7 +34,7 @@
           <li><a href="#quote" class="btn btn-small">Get a Free Quote</a></li>
         </ul>
       </nav>
-      <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="nav" aria-label="Toggle menu">
+      <button class="menu-toggle" id="menuToggle" type="button" aria-expanded="false" aria-controls="nav" aria-label="Open menu">
         <span></span>
         <span></span>
         <span></span>
@@ -41,9 +42,9 @@
     </div>
   </header>
 
-  <main>
+  <main id="main-content">
     <section class="hero">
-      <div class="container">
+      <div class="container hero-grid">
         <div class="hero-content">
           <p class="hero-eyebrow">Roofing support, made straightforward</p>
           <h1>Roofing done right, from slate to flat felt.</h1>
@@ -52,48 +53,58 @@
             <a href="#quote" class="btn btn-primary">Get a Free Quote</a>
             <a href="#services" class="btn btn-secondary">Explore our services</a>
           </div>
-          <ul class="hero-badges">
+          <ul class="hero-badges" aria-label="What to expect">
             <li>Clear next steps</li>
             <li>Repair and replacement options</li>
             <li>Urgent enquiries welcome</li>
           </ul>
+        </div>
+        <div class="roof-figure" aria-hidden="true">
+          <div class="roof-sky"></div>
+          <div class="roof-frame">
+            <span class="roof-line roof-line-left"></span>
+            <span class="roof-line roof-line-right"></span>
+            <span class="roof-plane roof-plane-back"></span>
+            <span class="roof-plane roof-plane-front"></span>
+            <span class="roof-window"></span>
+          </div>
+          <p class="roof-caption">A clear view of the work ahead</p>
         </div>
       </div>
     </section>
 
     <section class="services" id="services">
       <div class="container">
-        <p class="section-kicker">What we can help with</p>
         <h2 class="section-title">Roofing services, clearly explained</h2>
         <p class="section-intro">From a single leak to a complete replacement, choose the service that best matches your situation.</p>
         <div class="services-grid">
           <article class="service-card">
-            <div class="service-icon" aria-hidden="true">🏠</div>
+            <span class="service-mark" aria-hidden="true">01</span>
             <h3>Roof Repairs</h3>
             <p>Information about leaks, slipped slates, broken tiles and storm damage.</p>
           </article>
           <article class="service-card">
-            <div class="service-icon" aria-hidden="true">🔨</div>
+            <span class="service-mark" aria-hidden="true">02</span>
             <h3>Re-roofing</h3>
             <p>Full and partial roof replacements, with options explained for the building and situation.</p>
           </article>
           <article class="service-card">
-            <div class="service-icon" aria-hidden="true">🏢</div>
+            <span class="service-mark" aria-hidden="true">03</span>
             <h3>Flat Roofing</h3>
             <p>EPDM rubber, GRP fibreglass and felt flat roofs for homes and businesses.</p>
           </article>
           <article class="service-card">
-            <div class="service-icon" aria-hidden="true">🌧️</div>
+            <span class="service-mark" aria-hidden="true">04</span>
             <h3>Emergency Call-outs</h3>
             <p>Information and next-step guidance for storm damage and urgent leaks.</p>
           </article>
           <article class="service-card">
-            <div class="service-icon" aria-hidden="true">🪟</div>
-            <h3>Guttering & Leadwork</h3>
+            <span class="service-mark" aria-hidden="true">05</span>
+            <h3>Guttering &amp; Leadwork</h3>
             <p>Information about gutters, fascias, soffits and lead flashing for repair or replacement enquiries.</p>
           </article>
           <article class="service-card">
-            <div class="service-icon" aria-hidden="true">✅</div>
+            <span class="service-mark" aria-hidden="true">06</span>
             <h3>Roof Surveys</h3>
             <p>Roof survey enquiries for homebuyers, insurance and maintenance information.</p>
           </article>
@@ -103,7 +114,6 @@
 
     <section class="trust" id="why-us">
       <div class="container">
-        <p class="section-kicker">A simpler way to start</p>
         <h2 class="section-title">Useful guidance before work begins</h2>
         <p class="section-intro">Good roofing decisions start with a clear conversation. We keep the first step focused on understanding the job.</p>
         <div class="trust-grid">
@@ -130,6 +140,7 @@
     <section class="quote" id="quote">
       <div class="container">
         <div class="quote-box">
+          <p class="form-label">Start with the details</p>
           <h2>Get your free roofing quote</h2>
           <p id="formIntro">This is a non-submitting demo form. It does not send enquiries or store your details.</p>
           <form class="quote-form" id="quoteForm" novalidate aria-describedby="formIntro formNote">
